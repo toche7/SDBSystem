@@ -30,30 +30,7 @@ $this->load->view('templates/footer');
 }
 
  function staff() { 
- $session_data = $this->session->userdata('logged_in');
- $data['username'] = $session_data['username'];
- $this->load->library('form_validation');
-$this->form_validation->set_error_delimiters('<div class="text-warning">', '</div>');
-     
-//Validating Name Field
-$this->form_validation->set_rules('dname', 'Username', 'required|min_length[5]|max_length[15]');
-
-//Validating Email Field
-$this->form_validation->set_rules('demail', 'Email', 'required|valid_email');
-
-//Validating Mobile no. Field
-$this->form_validation->set_rules('dmobile', 'Mobile No.', 'required|regex_match[/^[0-9]{10}$/]');
-
-//Validating Address Field
-$this->form_validation->set_rules('daddress', 'Address', 'required|min_length[10]|max_length[50]');
-
-if ($this->form_validation->run() == FALSE) {
-$data['form_1_errors'] = 1;  
-$this->load->view('templates/header');
-$this->load->view('templates/navi', $data);
-$this->load->view('pages/insert', $data);
-$this->load->view('templates/footer'); 
-} else {
+ 
 //Setting values for tabel columns
 $dataDB = array(
 'staff_Name' => $this->input->post('dname'),
@@ -61,33 +38,36 @@ $dataDB = array(
 'staff_Mobile' => $this->input->post('dmobile'),
 'staff_Address' => $this->input->post('daddress')
 );
-//Transfering data to Model
-$this->insert_model->form_insert($dataDB);
-$data['message'] = 'Data Inserted Successfully';
-//Loading View
-$this->load->view('templates/header');
-$this->load->view('templates/navi', $data);
-$this->load->view('pages/insert', $data);
-$this->load->view('templates/footer'); 
+
+if  ( $this->db->insert('staffss', $dataDB)){
+      echo "success";     
+  }
+else {
+       echo "Error on insert data to DB";     
 }
 
 }
+
+ 
  function department() { 
  
  $dataDB = array(
-'name' => $this->input->post('dname')
-   
+'name' => $this->input->post('dname')    
 );
- $namex = $this->input->post('dname');   
-echo $namex;
- 
-//Setting values for tabel columns
-
+  
+//$this->db->insert('department', $dataDB);
+ //Setting values for tabel columns
 //Transfering data to Model
-$this->insert_model->form_insert_departments($dataDB);
-
-   }
-
-
+ 
+ // $this->insert_model->form_insert_departments($dataDB);
+ 
+ if  ( $this->db->insert('departments', $dataDB)){
+      echo "success";     
+  }
+else {
+       echo "Error on insert data to DB";     
+}
+    }
+ 
 }
 

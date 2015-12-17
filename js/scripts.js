@@ -1,36 +1,47 @@
  
 $(document).ready(function(){
-    $("#menuTab1").click(function(){
+ 
+     $("#menuTab1").click(function(){
         $("#successStaff").addClass('hidden');
      });
-         $("#menuTab2").click(function(){
+    $("#menuTab2").click(function(){
         $("#successDepartment").addClass('hidden');
-     });
-    $("#menuTab3").click(function(){
-        $("#successStaff").removeClass('hidden');
-     });
- 
-    $("#menuTab4").click(function(){
-        $("#successDepartment").toggleClass('hidden');
      });
      
      $("#formStaff").submit(function(){
-    alert("Submitted Staff Form");
+        event.preventDefault();
+        $("#successStaff").addClass('hidden');
+        $.post("insertcontroller/staff",
+       $(this).serialize() ,
+        function(data,status){
+                 if(data==="success"){
+                  $("#successStaff").removeClass('hidden');
+            }else
+            {
+                    alert("Data: " + data + "\nStatus: " + status);   
+            }
+        });
+    
      });
      
     $("#formDepartment").submit(function(){
         event.preventDefault();
+        $("#successDepartment").addClass('hidden');
         $.post("insertcontroller/department",
-        {
-          dname: "Donald Duck"
-        },
+       $(this).serialize() ,
         function(data,status){
-            alert("Data: " + data + "\nStatus: " + status);
-            if(status==="success"){
+         
+          if(data==="success"){
                   $("#successDepartment").removeClass('hidden');
+            }else
+            {
+                    alert("Data: " + data + "\nStatus: " + status);              
             }
+  
         });
      });
+     
+
      
  
 });
