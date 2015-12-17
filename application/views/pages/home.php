@@ -14,7 +14,7 @@
         <li><a href="http://www.bootply.com/85861" target="ext"><i class="glyphicon glyphicon-list-alt"></i> Reports</a></li>
         <li><a href="http://www.bootply.com/85861" target="ext"><i class="glyphicon glyphicon-briefcase"></i> Tools</a></li>
         <li><a href="http://www.bootply.com/85861" target="ext"><i class="glyphicon glyphicon-time"></i> History</a></li>
-        <li><a href="insert_c"><i class="glyphicon glyphicon-plus"></i> Insert</a></li>
+        <li><a href="insertcontroller"><i class="glyphicon glyphicon-plus"></i> Insert</a></li>
       </ul>
       
       <hr>

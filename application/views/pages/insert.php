@@ -37,9 +37,8 @@
           </div>
         </div>
         <div class="panel-body">
-          
-           <?php echo form_open('insert_c/staff'); ?> 
-          <form class="form form-vertical">
+
+          <form id="formStaff" class="form form-vertical">
             <div class="control-group">
               <label >ชื่อ-สกุล</label>
               <div class="controls">
@@ -91,9 +90,7 @@
 
 </div>
    
- 
-
-            
+  
  </div>
    
 <div class="tab-pane  text-style" id="tab2">
@@ -111,9 +108,8 @@
           </div>
         </div>
         <div class="panel-body">
-          
-           <?php echo form_open('insert_c/department'); ?> 
-          <form class="form form-vertical">
+ 
+          <form id="formDepartment" class="form form-vertical">
             <div class="control-group">
               <label >ชื่อหน่วยงาน</label>
               <div class="controls">
