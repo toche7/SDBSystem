@@ -13,5 +13,25 @@ $(document).ready(function(){
     $("#menuTab4").click(function(){
         $("#successDepartment").toggleClass('hidden');
      });
+     
+     $("#formStaff").submit(function(){
+    alert("Submitted Staff Form");
+     });
+     
+    $("#formDepartment").submit(function(){
+        event.preventDefault();
+        $.post("insertcontroller/department",
+        {
+          dname: "Donald Duck"
+        },
+        function(data,status){
+            alert("Data: " + data + "\nStatus: " + status);
+            if(status==="success"){
+                  $("#successDepartment").removeClass('hidden');
+            }
+        });
+     });
+     
+ 
 });
  
