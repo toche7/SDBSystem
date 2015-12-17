@@ -131,10 +131,8 @@
             </div>              
           </form>
             <?php if (isset($form_2_errors)) {  echo validation_errors();} ?>
- 
         </div><!--/panel content-->
-
-      </div><!--/panel-->  
+       </div><!--/panel-->  
 </div>   
  </div>
         </div>
