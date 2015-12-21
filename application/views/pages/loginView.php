@@ -8,7 +8,9 @@
           <form class="form form-vertical">
               
              <div class='control-group' >
-                 <h4 class='text-center'> Welcome to RDB System</h4><br>                   
+                 <h4 class='text-center'>ยินดีต้อนรับสู่ระบบข้อมูลงานวิจัย </h4>
+                     <h4 class='text-center'> (RDB System)</h4><br>      
+           
              </div>                    
               
             <div class="form-group has-success">

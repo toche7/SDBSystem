@@ -1,7 +1,7 @@
-<div class="container">
- <div class='row'>
+<div class="container"> 
+ <div class="row">
 
-  <div class ='col-md-3' >
+  <div class ="col-md-3" >
    <div class="panel panel-default">
         <div class="panel-heading">
           <div class="panel-title">
@@ -136,6 +136,11 @@
 </div>
 
 <script src="<?php echo base_url()?>js/scripts.js"></script>
+<script> 
+  $(function() {
+        $("#Data").addClass("active");
+ });
+ </script>
 
 
  

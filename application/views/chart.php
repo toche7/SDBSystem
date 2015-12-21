@@ -30,8 +30,23 @@ foreach ($chart_data as $data) {
                 chart.draw(data, options);
             }
         </script>
+
     </head>
     <body>        
+    <div class="container">  
+        
         <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
+            
+    </div>
     </body>
 </html>
+
+<script> 
+  $(function() {
+  
+    
+      // add class to the one we clicked
+      $("#Report").addClass("active");
+ 
+});
+ </script>

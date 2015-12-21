@@ -39,7 +39,7 @@ $dataDB = array(
 'staff_Address' => $this->input->post('daddress')
 );
 
-if  ( $this->db->insert('staffss', $dataDB)){
+if  ( $this->db->insert('staffs', $dataDB)){
       echo "success";     
   }
 else {

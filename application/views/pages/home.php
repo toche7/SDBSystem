@@ -5,25 +5,30 @@
   <div class="row">
 	<div class="col-sm-3">
       <!-- left -->
-      <h3><i class="glyphicon glyphicon-star"></i> Main</h3>
+       <h4><i class="glyphicon glyphicon-star"></i> เข้าระบบ</h4>  
       <hr>
+      <h4><i class="glyphicon glyphicon-star"></i> งานวิจัย/บริการวิชาการ</h4>
+ 
+        <ul class="nav nav-stacked">
+        <li><a href="#" ><i class="glyphicon glyphicon-flash"></i> ทุนวิจัย</a></li>
+        <li><a href="#" ><i class="glyphicon glyphicon-link"></i> บริการวิชาการ/จ้างที่ปรึกษา</a></li>
+        <li><a href="#" ><i class="glyphicon glyphicon-briefcase"></i> ผลงานวิชาการ</a></li>
+        <li><a href="#" ><i class="glyphicon glyphicon-list-alt"></i> ทรัพย์สินทางปัญญา</a></li>
+       </ul>
       
-      <ul class="nav nav-stacked">
-        <li><a href="chartcontroller" ><i class="glyphicon glyphicon-flash"></i> Browse</a></li>
-        <li><a href="chartcontroller" ><i class="glyphicon glyphicon-link"></i> Graph</a></li>
-        <li><a href="http://www.bootply.com/85861" target="ext"><i class="glyphicon glyphicon-list-alt"></i> Reports</a></li>
-        <li><a href="http://www.bootply.com/85861" target="ext"><i class="glyphicon glyphicon-briefcase"></i> Tools</a></li>
-        <li><a href="http://www.bootply.com/85861" target="ext"><i class="glyphicon glyphicon-time"></i> History</a></li>
-        <li><a href="insertcontroller"><i class="glyphicon glyphicon-plus"></i> Insert</a></li>
+      <hr>
+            <h4><i class="glyphicon glyphicon-star"></i> ข้อมูล</h4>
+
+        <ul class="nav nav-stacked">
+             <li><a href="http://www.bootply.com/85861" target="ext"><i class="glyphicon glyphicon-time"></i> ประวัตินักวิจัย</a></li>
+            <li><a href="insertcontroller"><i class="glyphicon glyphicon-plus"></i> จัดการข้อมูล</a></li>
       </ul>
-      
-      <hr>
       
   	</div><!-- /span-3 -->
     <div class="col-sm-9">
       	
       <!-- column 2 -->	
-       <h3><i class="glyphicon glyphicon-dashboard"></i> ระบบ RBD  Dashboard</h3>  
+       <h3><i class="glyphicon glyphicon-dashboard"></i> Dashboard</h3>  
             
        <hr>
       
@@ -144,6 +149,7 @@
       
       <!--tabs-->
       <div class="container">
+          <div class="col-md-8">
         <ul class="nav nav-tabs" id="myTab">
           <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
           <li><a href="#messages" data-toggle="tab">Messages</a></li>
@@ -173,24 +179,10 @@
               Aliquam in felis sit amet augue.</p>
           </div>
         </div>
+              </div>
       </div>
       <!--/tabs-->
-      
-      <hr>
-      
-      <div class="panel panel-default">
-        <div class="panel-heading"><h4>New Requests</h4></div>
-        <div class="panel-body">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Hosting virtual mailbox serv..</a>
-            <a href="#" class="list-group-item">Dedicated server doesn't..</a>
-            <a href="#" class="list-group-item">RHEL 6 install on new..</a>
-          </div>
-        </div>
-      </div>
-      
-      <hr>
-      
+       
       <div class="alert alert-info">
         <button type="button" class="close" data-dismiss="alert">×</button>
         Please remember to <a href="#">Logout</a> for classified security.
@@ -214,55 +206,7 @@
       
       <hr>
               
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="panel-title">
-            <i class="glyphicon glyphicon-wrench pull-right"></i>
-            <h4>Submit Request</h4>
-          </div>
-        </div>
-        <div class="panel-body">
-          
-          <form class="form form-vertical">
-            <div class="control-group">
-              <label>Name</label>
-              <div class="controls">
-                <input type="text" class="form-control" placeholder="Enter Name">
-              </div>
-            </div>      
-            <div class="control-group">
-              <label>Title</label>
-              <div class="controls">
-                <input type="password" class="form-control" placeholder="Password">
-                
-              </div>
-            </div>   
-            <div class="control-group">
-              <label>Details</label>
-              <div class="controls">
-                <textarea class="form-control"></textarea>
-              </div>
-            </div> 
-            <div class="control-group">
-              <label>Select</label>
-              <div class="controls">
-                <select class="form-control"><option>General Question</option><option>Server Issues</option><option>Billing Question</option></select>
-              </div>
-            </div>    
-            <div class="control-group">
-              <label></label>
-              <div class="controls">
-                <button type="submit" class="btn btn-primary">
-                  Post
-                </button>
-              </div>
-            </div>   
-            
-          </form>
-          
-          
-        </div><!--/panel content-->
-      </div><!--/panel-->
+   
       
       <div class="panel panel-default">
         <div class="panel-heading"><div class="panel-title"><h4>Engagement</h4></div></div>
