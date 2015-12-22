@@ -89,7 +89,30 @@
       </div><!--/panel-->  
 
 </div>
-   
+ 
+     <div class="col-md-4">
+      
+      <table class="table table-striped">
+        <thead>
+          <tr><th>ชื่อ-สกุล</th><th>อีเมล</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ทวีศักดิ์ สมานชื่น</td><td>taweesak.sam@mahidol.ac.th</td></tr>
+          <tr><td>ทวีศักดิ์ สมานชื่น</td><td>taweesak.sam@mahidol.ac.th</td></tr>
+          <tr><td>ทวีศักดิ์ สมานชื่น</td><td>taweesak.sam@mahidol.ac.th</td></tr>
+          <tr><td>ทวีศักดิ์ สมานชื่น</td><td>taweesak.sam@mahidol.ac.th</td></tr>
+          <tr><td>ทวีศักดิ์ สมานชื่น</td><td>taweesak.sam@mahidol.ac.th</td></tr>
+          <tr><td>ทวีศักดิ์ สมานชื่น</td><td>taweesak.sam@mahidol.ac.th</td></tr>
+          <tr><td>ทวีศักดิ์ สมานชื่น</td><td>taweesak.sam@mahidol.ac.th</td></tr>          
+             </tbody>
+      </table>
+      
+    
+ 
+
+    
+    </div>
+    
   
  </div>
    
