@@ -1,4 +1,4 @@
-'<?php
+<?php
 Class User extends CI_Model
 {
  function login($username, $password)
