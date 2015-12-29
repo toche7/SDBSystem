@@ -5,7 +5,7 @@ class insert  extends CI_Controller {
 
 function __construct() {
 parent::__construct();
-  $this->load->model('insertModel');
+  $this->load->model('insert_model');
 //  $this->load->model('deliveryModel');
   }
 function index() {
@@ -15,7 +15,7 @@ function index() {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
     /* $this->load->view('home_view', $data); */
-     $data['department'] = $this->insertModel->get_departments();
+     $data['department'] = $this->insert_model->get_departments();
 
 //Including validation library
 
@@ -75,13 +75,13 @@ else {
       //delete employee record
       $this->db->where('id_department', $id);
       $this->db->delete('departments');
-    
+
   }
 
   function refreshShow()
-  { 
-         $data['members'] = $this->insertModel->get_departments();
-         $this->load->view('pages/table.php', $data); 
+  {
+         $data['members'] = $this->insert_model->get_departments();
+         $this->load->view('pages/table.php', $data);
   }
 
 }

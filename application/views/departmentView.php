@@ -1,6 +1,4 @@
- <?php
-echo "";
-?>
+
     <h3>ข้อมูลนักวิจัย</h3>
     <br />
     <button class="btn btn-primary" onclick="add_person()"><i class="glyphicon glyphicon-plus"></i> Add Person</button>
@@ -9,41 +7,41 @@ echo "";
     <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
         <tr>
-    
+
           <th>สังกัด</th>
-       
+
           <th style="width:100px;">Action</th>
         </tr>
       </thead>
       <tbody>
       </tbody>
- 
+
       <tfoot>
         <tr>
-  
-          <th>Department</th>   
+
+          <th>Department</th>
           <th>Action</th>
         </tr>
       </tfoot>
     </table>
 
-  
+
   <script>
- 
+
     var save_method; //for save method string
     var table;
     $(document).ready(function() {
       table = $('#table').DataTable({
- 
+
         "processing": true, //Feature control the processing indicator.
         "serverSide": true, //Feature control DataTables' server-side processing mode.
- 
+
         // Load data for the table's content from an Ajax source
         "ajax": {
             "url": "<?php echo site_url('department/ajax_list')?>",
             "type": "POST"
         },
- 
+
         //Set column definition initialisation properties.
         "columnDefs": [
         {
@@ -51,10 +49,10 @@ echo "";
           "orderable": false, //set not orderable
         },
         ],
- 
+
       });
     });
- 
+
     function add_person()
     {
       save_method = 'add';
@@ -62,19 +60,19 @@ echo "";
       $('#modal_form').modal('show'); // show bootstrap modal
       $('.modal-title').text('Add Person'); // Set Title to Bootstrap modal title
     }
- 
+
     function edit_person(id)
     {
       save_method = 'update';
       $('#form')[0].reset(); // reset form on modals
- 
+
       //Ajax Load data from ajax
       $.ajax({
         url : "<?php echo site_url('person/ajax_edit/')?>/" + id,
         type: "GET",
         dataType: "JSON",
         success: function(data)
-        {    
+        {
             $('[name="id"]').val(data.id);
             $('[name="firstName"]').val(data.firstName);
             $('[name="lastName"]').val(data.lastName);
@@ -83,10 +81,10 @@ echo "";
             $('[name="address"]').val(data.address);
             $('[name="dob"]').val(data.dob);
             $('[name="department"]').val(data.department);
- 
+
             $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
             $('.modal-title').text('Edit Person'); // Set title to Bootstrap modal title
- 
+
         },
         error: function (jqXHR, textStatus, errorThrown)
         {
@@ -94,12 +92,12 @@ echo "";
         }
     });
     }
- 
+
     function reload_table()
     {
       table.ajax.reload(null,false); //reload datatable ajax
     }
- 
+
     function save()
     {
       var url;
@@ -111,7 +109,7 @@ echo "";
       {
           url = "<?php echo site_url('person/ajax_update')?>";
       }
- 
+
        // ajax adding data to database
           $.ajax({
             url : url,
@@ -130,7 +128,7 @@ echo "";
             }
         });
     }
- 
+
     function delete_person(id)
     {
       if(confirm('Are you sure delete this data?'))
@@ -151,12 +149,12 @@ echo "";
                 alert('Error adding / update data');
             }
         });
- 
+
       }
     }
- 
+
   </script>
- 
+
   <!-- Bootstrap modal -->
   <div class="modal fade" id="modal_form" role="dialog">
   <div class="modal-dialog">
@@ -220,12 +218,12 @@ echo "";
               <label class="control-label col-md-3">สังกัด</label>
               <div class="col-md-9">
                 <select name="department" class="form-control">
-                
-                <?php 
+
+          <?php/*      <?php
                 foreach($department as $lst)
                 { ?><option value="<?php echo $lst->id_department; ?>"><?php echo $lst->name_department; ?></option>';
                 <?php }
-                ?>
+                ?>  */?>
                 </select>
               </div>
             </div>

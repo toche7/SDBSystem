@@ -1,5 +1,5 @@
 <?php
-class insertModel extends CI_Model{
+class insert_model extends CI_Model{
 function __construct() {
 parent::__construct();
 }
@@ -13,7 +13,7 @@ $this->db->insert('departments', $data);
 }
 
 function get_departments() {
-   
+
     $this->db->order_by("name_department", "asc");
     $query = $this->db->get('departments');
     return $query->result();
