@@ -2,7 +2,7 @@
 <div class="container">
   <div class='row'>
       <div class ='col-md-4 text-center'>                
-             <img src="<?php echo base_url('assets/img/gear.png')?>" 
+             <img src="<?php echo base_url('assets/img/square.png')?>" 
                   alt="Cinque Terre" class="img-rounded" width="260" height="260" >          
       </div>
                                               
